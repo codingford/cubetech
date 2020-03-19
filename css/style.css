@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .main-header {
-  background-color: #000;
+  background-color: #262626;
   min-height: 105px;
   font-family: poppins, sans-serif;
 }
@@ -349,6 +349,7 @@ a.more-inf {
   min-height: 670px;
   background-color: #7bc34d;
   padding-top: 100px;
+  margin-bottom: 60px;
 }
 .work-organizing h3, .work-organizing p {
   margin: 0 auto;
@@ -423,7 +424,7 @@ a.more-inf {
 }
 
 .feedback {
-  min-height: 500px;
+  min-height: 410px;
   padding-top: 25px;
   flex-direction: column;
   align-content: center;
@@ -462,10 +463,19 @@ a.more-inf {
   margin: 7px;
 }
 
+.blog {
+  min-height: 1350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
 .blog .container {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 .blog .container > div {
   box-sizing: border-box;
@@ -477,7 +487,6 @@ a.more-inf {
   font-family: oswald, sans-serif;
   font-weight: 400;
   font-size: 32px;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 35px;
 }
@@ -485,31 +494,154 @@ a.more-inf {
   font-family: Raleway, sans-serif;
   font-size: 16px;
   font-weight: 600;
-  text-align: center;
   margin-bottom: 60px;
 }
 .blog .img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 245px;
   overflow: hidden;
 }
 
 .blog-contents {
   padding: 15px 30px;
+  text-align: justify;
 }
 .blog-contents h4 {
   font-family: raleway, sans-serif;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 33px;
   color: #585858;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-contents h4:hover {
+  overflow: visible;
+  white-space: normal;
+  margin-bottom: 10px;
 }
 .blog-contents p {
   font-family: poppins, sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #5c5c5c;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+.blog-contents .more-inf {
+  box-sizing: border-box;
+  padding: 5px 19px 5px 10px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  font-weight: 400;
+  float: left;
+  margin-bottom: 10px;
+  position: relative;
+}
+.blog-contents .more-inf::after {
+  position: absolute;
+  content: " ";
+  background-image: url("../media/rarr.png");
+  width: 20px;
+  height: 6px;
+  top: 16px;
+}
+.blog-contents .admin {
+  font-family: oswald, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  padding: 5px;
+  color: #93c948;
+  float: right;
+}
+
+a.blog-btn {
+  font-weight: 500;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.faq {
+  flex-direction: column;
+  min-height: 760px;
+  align-items: center;
+}
+.faq > h3 {
+  font-family: oswald, sans-serif;
+  font-weight: 500;
+  font-size: 33px;
+  margin-bottom: 15px;
+}
+.faq > p {
+  font-family: raleway, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 85px;
+  color: #585858;
+}
+.faq .ui-accordion-header-active,
+.faq .ui-button:active,
+.faq .ui-state-active {
+  background-color: #93c948;
+  border-color: #7bc34d;
+}
+
+.ui-accordion .ui-accordion-header {
+  font-family: oswald, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+}
+
+.clients {
+  background-color: #71bf3f;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.clients h3 {
+  font-family: oswald, sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  flex-basis: 40%;
+  text-align: center;
+}
+.clients .container {
+  align-items: center;
+}
+.clients .container div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 300px;
+}
+.clients .container a {
+  padding: 5px;
+}
+.clients .container a:nth-child(2) {
+  padding: 25px;
+}
+.clients .container a:nth-child(5) {
+  padding-top: 45px;
+}
+
+.message {
+  background-color: #d65e70;
+  min-height: 460px;
+}
+
+footer {
+  background-color: #262626;
+  min-height: 385px;
 }
 
 /*# sourceMappingURL=style.css.map */
