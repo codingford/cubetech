@@ -602,10 +602,6 @@ a.blog-btn {
 .faq .accordion {
   flex-basis: 48%;
 }
-.faq .accordion > div {
-  max-height: 300px;
-  overflow-y: auto;
-}
 .faq > h3 {
   font-family: oswald, sans-serif;
   font-weight: 500;
