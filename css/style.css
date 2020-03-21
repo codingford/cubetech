@@ -459,6 +459,24 @@ a.more-inf {
   font-size: 32px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 80px;
+}
+.feedback .responsive {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.feedback .imgs-wr {
+  max-width: 35%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+.feedback .slick-list {
+  margin-bottom: 70px;
+}
+.feedback .slick-dots li button:before {
+  font-size: 18px;
+  color: #7bc34d;
 }
 .feedback h4 {
   font-family: oswald, sans-serif;
