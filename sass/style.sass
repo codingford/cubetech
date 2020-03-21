@@ -112,18 +112,28 @@ h1, h2, h3, h4, h5, h6, p
     background-repeat: no-repeat
     background-position: center
     min-height: 482px
-    
     display: flex
     flex-direction: column
     justify-content: center
     margin-bottom: 114px
-    
+    position: relative
+    &::before
+        content: " "
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        background-color: rgba(0, 0, 0, 0.3)
+        z-index: 0
     .container
         display: block
         margin:0 0 0 24%
         max-width: 430px
-        color: #fff
-        background-color: f9f9f9
+        color: #f9f9f9
+        position: relative
+        z-index: 5
+      
 
         p
             font-family: poppins, sans-serif
@@ -155,8 +165,11 @@ a.more-inf
     text-align: center
     letter-spacing: -1px
     .container
+        flex-direction: row
         flex-wrap: wrap
-        justify-content: center
+        justify-content: space-between
+        div
+            flex-basis: 20%
     h3
         font-family: oswald, sans-serif
         font-weight: 500
@@ -258,7 +271,7 @@ a.more-inf
         margin-bottom: 25px
     p
         font-family: Raleway, sans-serif
-        font-size: 16
+        font-size: 16px
         font-weight: 600
         text-align: center
         margin-bottom: 50px
@@ -412,7 +425,7 @@ a.more-inf
         margin: 7px
 
 //     .slick-slider
-    
+
 .blog
     min-height: 1350px
     text-align: center
@@ -509,7 +522,14 @@ a.blog-btn
     flex-direction: column
     min-height: 760px
     align-items: center
-   
+    .collapsable-menu
+        display: flex
+        justify-content: space-between
+    .accordion
+        flex-basis: 48%
+        >div
+            max-height: 300px
+            overflow-y: auto
     >h3
         font-family: oswald, sans-serif
         font-weight: 500
@@ -530,7 +550,7 @@ a.blog-btn
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 24px
-        text-align: center
+        // text-align: center
 
 .clients
     background-color: #71bf3f

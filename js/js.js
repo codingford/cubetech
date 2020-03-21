@@ -23,6 +23,6 @@ $('.multiple-items').slick({
   });
 
 $( function() {
-  $( "#accordion" ).accordion();
+  $( ".accordion" ).accordion();
   });
   
