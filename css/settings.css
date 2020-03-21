@@ -9,9 +9,7 @@
     font-family: "sfpro regular";
     src: url(../fonts/SFProDisplay-Regular.woff)
 }
-section,
-footer,
-header,
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
