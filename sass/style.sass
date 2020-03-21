@@ -154,7 +154,7 @@ a.more-inf
     line-height: 28px
     letter-spacing: 1px
     padding: 14px 20px
-    background-color: #7ac34c
+    background-color: #93c948
     color: #fff
 
 
@@ -256,10 +256,11 @@ a.more-inf
     .img-wrapper
         flex-direction: row
         flex-wrap: wrap
+        overflow: hidden
         div
             display: inline-block
-            width: 420px
-            height: 320px
+            max-width: 420px
+            max-height: 320px
             margin: 7px
 
     h3
@@ -525,14 +526,23 @@ a.blog-btn
     .collapsable-menu
         display: flex
         justify-content: space-between
+    
     .accordion
         flex-basis: 48%
-    
+        h3
+            font-family: oswald, sans-serif
+            font-weight: 500
+            font-size: 23px
+       
+    >div
+        max-height: 100px 
     >h3
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 33px
         margin-bottom: 15px
+        outline-color: #71bf3f
+
     >p
         font-family: raleway, sans-serif
         font-size: 16px
@@ -548,7 +558,10 @@ a.blog-btn
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 24px
-        // text-align: center
+        outline-color: #71bf3f
+.ui-widget-content, .ui-accordion-content-active
+    height: 260px 
+    overflow: auto 
 
 .clients
     background-color: #71bf3f

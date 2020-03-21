@@ -177,7 +177,7 @@ a.more-inf {
   line-height: 28px;
   letter-spacing: 1px;
   padding: 14px 20px;
-  background-color: #7ac34c;
+  background-color: #93c948;
   color: #fff;
 }
 
@@ -291,11 +291,12 @@ a.more-inf {
 .projects .img-wrapper {
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .projects .img-wrapper div {
   display: inline-block;
-  width: 420px;
-  height: 320px;
+  max-width: 420px;
+  max-height: 320px;
   margin: 7px;
 }
 .projects h3 {
@@ -602,11 +603,20 @@ a.blog-btn {
 .faq .accordion {
   flex-basis: 48%;
 }
+.faq .accordion h3 {
+  font-family: oswald, sans-serif;
+  font-weight: 500;
+  font-size: 23px;
+}
+.faq > div {
+  max-height: 100px;
+}
 .faq > h3 {
   font-family: oswald, sans-serif;
   font-weight: 500;
   font-size: 33px;
   margin-bottom: 15px;
+  outline-color: #71bf3f;
 }
 .faq > p {
   font-family: raleway, sans-serif;
@@ -626,6 +636,12 @@ a.blog-btn {
   font-family: oswald, sans-serif;
   font-weight: 500;
   font-size: 24px;
+  outline-color: #71bf3f;
+}
+
+.ui-widget-content, .ui-accordion-content-active {
+  height: 260px;
+  overflow: auto;
 }
 
 .clients {
