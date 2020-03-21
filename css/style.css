@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .container.navigation {
   box-sizing: border-box;
-  height: 42px;
+  min-height: 42px;
   justify-content: space-between;
 }
 .container.navigation a {
@@ -175,6 +175,10 @@ a.more-inf {
   margin: 0 auto;
   text-align: center;
   letter-spacing: -1px;
+}
+.creation .container {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .creation h3 {
   font-family: oswald, sans-serif;
@@ -261,10 +265,22 @@ a.more-inf {
 }
 
 .projects {
-  width: 100%;
   min-height: 900px;
-  margin-bottom: 75px;
+  max-width: 1400px;
+  margin: 0 auto 75px;
+}
+.projects .wrap {
   text-align: center;
+}
+.projects .img-wrapper {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.projects .img-wrapper div {
+  display: inline-block;
+  width: 420px;
+  height: 320px;
+  margin: 7px;
 }
 .projects h3 {
   font-family: oswald, sans-serif;
@@ -280,12 +296,6 @@ a.more-inf {
   font-weight: 600;
   text-align: center;
   margin-bottom: 50px;
-}
-.projects div {
-  display: inline-block;
-  width: 420px;
-  height: 320px;
-  margin: 7px;
 }
 .projects .more-inf {
   font-size: 20px;
@@ -462,9 +472,7 @@ a.more-inf {
 
 .blog {
   min-height: 1350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   margin-bottom: 80px;
 }
 .blog .container {
@@ -476,6 +484,7 @@ a.more-inf {
 }
 .blog .container > div {
   box-sizing: border-box;
+  min-width: 270px;
   max-width: 30%;
   border: 5px solid #93c948;
   margin-bottom: 75px;
