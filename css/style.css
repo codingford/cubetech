@@ -180,6 +180,13 @@ a.more-inf {
   background-color: #93c948;
   color: #fff;
 }
+a.more-inf:hover {
+  background-color: #7ac34c;
+}
+a.more-inf:active {
+  background-color: #6bb83b;
+  transform: translateY(4px);
+}
 
 .creation {
   min-height: 530px;
@@ -598,9 +605,13 @@ a.more-inf {
   letter-spacing: 1px;
   text-transform: uppercase;
   background-color: #ffffff;
+  border-radius: 20px;
   padding: 5px;
   color: #93c948;
   float: right;
+}
+.blog-contents .admin:hover {
+  background-color: #cdee9f;
 }
 
 a.blog-btn {
@@ -699,11 +710,49 @@ a.blog-btn {
 .message {
   background-color: #d65e70;
   min-height: 460px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.message .container {
+  align-items: center;
+}
+.message .container h3, .message .container h4 {
+  font-family: oswald, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.message .container h4 {
+  font-size: 24px;
+}
+.message .container h4 + p {
+  text-transform: uppercase;
+}
+.message .container a, .message .container p {
+  text-decoration: none;
+  display: block;
+  font-family: poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+  color: #ffffff;
+}
+.message .container > div {
+  flex-basis: 48%;
+  justify-content: space-around;
+  padding: 5px 15px;
+}
+.message .contacts-inner-wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
   background-color: #262626;
   min-height: 385px;
+}
+footer .container {
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

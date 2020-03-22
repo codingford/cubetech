@@ -38,14 +38,14 @@
             </ul>
             <nav class="main-nav">    
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Team</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Clients</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a class="flowing-scroll" href="#about">About</a></li>
+                    <li><a class="flowing-scroll" href="#projects">Projects</a></li>
+                    <li><a class="flowing-scroll" href="#team">Team</a></li>
+                    <li><a class="flowing-scroll" href="#blog">Blog</a></li>
+                    <li><a class="flowing-scroll" href="#faq">FAQ</a></li>
+                    <li><a class="flowing-scroll" href="#clients">Clients</a></li>
+                    <li><a class="flowing-scroll" href="#contacts">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,7 +55,7 @@
             <div class="container">
                 <p>Todays Talent. Tommorow success</p>
                 <h2>We Help to Grow Your Bussiness</h2>
-                <a class="more-inf" href="#">Learn More</a>
+                <a class="more-inf" href="#about">Learn More</a>
             </div>
         </section>
     
@@ -88,7 +88,7 @@
  
         </section>
  
-        <section class="wr-about">
+        <section id="about" class="wr-about">
             <div class="container">
                 <div class="about">
                     <h3>who we are</h3>
@@ -100,7 +100,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="projects" class="projects">
             <div class="wrap">
                 <h3>our projects</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eligendi.</p>
@@ -116,7 +116,7 @@
             </div>
 
         </section>
-        <section class="team container">
+        <section id="team" class="team container">
             <h3>our team</h3>
             <p>Lorem ipsum dolor sit amet.</p>
             <div class="staff">
@@ -174,7 +174,7 @@
         </section>
         <section class="feedback container">
             <h3>our clients say</h3>
-            <div class="responsive">
+            <div class="responsive slider-item">
                 <div class="imgs-wr">
                     <img src="./media/client-1.png" alt="decorative image">
                     <h4>Adam Smith</h4>
@@ -229,7 +229,7 @@
                 </div>
             </div>
         </section>
-        <section class="blog">
+        <section id="blog"class="blog">
             <h3>our blog</h3>
             <p>Lorem ipsum dolor sit amet.</p>
             <div class="container">
@@ -285,7 +285,7 @@
             </div>
             <a href="#" class="more-inf blog-btn">more blogs</a>
         </section>
-        <section class="faq container">
+        <section id="faq" class="faq container">
             <h3>FAQs</h3>
             <p>Lorem ipsum dolor sit amet.</p>
             <!-- collapsable group -->
@@ -349,7 +349,7 @@
                 </div>
             
         </section>
-        <section class="clients">
+        <section id="clients" class="clients">
             <div class="container">
                 <h3>meet<br>our clients</h3>
                 <div>
@@ -362,27 +362,30 @@
                 </div>
             </div>
         </section>
-            <section class="message">
-                <div class="container">
+        <section id="contacts" class="message">
+            <div class="container">
+                <div>
                     <h3>get in touch</h3>
                     <p>We are always looking for new exciting projects and collaborations. Feel free to contact us.</p>
-                    <div>
+                    <div class="contacts-inner-wrap">
                         <div>
                             <h4>office</h4>
                             <p>1076, some road opposite big mall</p>
                         </div>
                         <div>
                             <h4>contact</h4>
-                            <p>125 3475 765 <a href="">info@business.com</a></p>
+                            <p>125 3475 765</p><a href="">info@business.com</a>
                         </div>
                     </div>
-                    <div>
-                        <form action="">
-
-                        </form>
-                    </div>
                 </div>
-             </section>
+                <div>
+                    <form action="">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos harum dicta, architecto, nostrum dignissimos temporibus suscipit, beatae exercitationem fuga illum accusamus voluptatibus. Eius minima voluptatibus totam omnis voluptates consectetur velit.</p>
+
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container">
@@ -417,10 +420,13 @@
                 </ul>
             </div>
             <ul class="social-footer">
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="./media/facebook-logo-1.png" alt="facebook logo"></a>
+                </li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./media/instagram.png" alt="facebook logo"></a>
+                </li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><img src="./media/linked-in-logo-of-two-letters.png" alt="linkedin logo"></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><img src="./media/twitter-1.png" alt="facebook logo"></a>
+                </li>
             </ul>
             <p></p>
             <p><a href=""></a>/<a href=""></a></p>

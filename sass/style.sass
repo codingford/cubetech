@@ -3,7 +3,8 @@
 h1, h2, h3, h4, h5, h6, p
     margin: 0
  
-
+// .active
+//     font-size: 60px
 .visially-hidden
     width: 1px
     height: 0
@@ -156,7 +157,12 @@ a.more-inf
     padding: 14px 20px
     background-color: #93c948
     color: #fff
-
+    
+    &:hover
+        background-color: #7ac34c
+    &:active 
+        background-color: #6bb83b
+        transform: translateY(4px)
 
 .creation
     min-height: 530px
@@ -527,9 +533,13 @@ a.more-inf
         letter-spacing: 1px
         text-transform: uppercase
         background-color: #ffffff
+        border-radius: 20px
         padding: 5px
         color: #93c948
         float: right
+        &:hover
+            background-color: #cdee9f
+
 a.blog-btn
     font-weight: 500
     font-size: 23px
@@ -609,7 +619,39 @@ a.blog-btn
 .message
     background-color: #d65e70
     min-height: 460px
+    display: flex
+    flex-wrap: wrap
+    .container
+        align-items: center
+        h3, h4
+            font-family: oswald, sans-serif
+            font-weight: 400
+            font-size: 32px
+            text-transform: uppercase
+            color: #fff
+        h4
+            font-size: 24px
+            &+p
+                text-transform: uppercase
+
+
+        a, p
+            text-decoration: none
+            display: block    
+            font-family: poppins, sans-serif
+            font-size: 13px
+            font-weight: 200
+            color: #ffffff
+        >div
+            flex-basis: 48%
+            justify-content: space-around
+            padding: 5px 15px
+    .contacts-inner-wrap
+        display: flex
+        justify-content: space-between
     
 footer
     background-color: #262626
     min-height: 385px
+    .container 
+        flex-direction: column
