@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p
         right: 0
         left: 0
         bottom: 0
-        background-color: rgba(0, 0, 0, 0.3)
+        background-color: rgba(155, 72, 72, 0.1)
         z-index: 0
         
 .main-header
@@ -133,7 +133,9 @@ h1, h2, h3, h4, h5, h6, p
     background-image: url("../media/bg-first.png")
     background-repeat: no-repeat
     background-position: center
-    min-height: 482px
+    background-size: cover
+    
+    height: calc(100vh - 146px)
     display: flex
     flex-direction: column
     justify-content: center
@@ -146,7 +148,7 @@ h1, h2, h3, h4, h5, h6, p
         right: 0
         left: 0
         bottom: 0
-        background-color: rgba(0, 0, 0, 0.3)
+        background-color: rgba(0, 0, 0, 0.2)
         z-index: 0
     .container
         display: block
@@ -186,23 +188,22 @@ a.more-inf
         transform: translateY(4px)
 
 .creation
-    min-height: 530px
-    max-width: 1140px
-    margin: 0 auto
-    text-align: center
-    letter-spacing: -1px
     .container
         flex-direction: row
         flex-wrap: wrap
         justify-content: space-between
         div
-            flex-basis: 20%
+            flex-basis: 25%
+    text-align: center
+    letter-spacing: -1px
+    margin-bottom: 160px
+    display: block
     h3
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 32px
         letter-spacing: -1px
-        margin-bottom: 30px
+        margin-bottom: 27px
         position: relative
         &::after
             position: absolute
@@ -211,29 +212,33 @@ a.more-inf
             height: 3px
             background-color: #7ac34c
             bottom: -13px
-            left: calc(50% - 58px)
+            // left: calc(50% - 58px)
+            left: 50%
+            transform: translateX(-50%)
     p
         font-family: raleway, sans-serif
-        font-weight: 500
+        font-weight: 700
         font-size: 16px
         line-height: 24px
         padding: 3px 10px
         margin: 0 10px
-        margin-bottom: 45px
+        margin-bottom: 50px
     h4 
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 20px
         margin-bottom: 25px
+        &+p 
+            margin-bottom: 0
     img 
         height: 51px
         margin-bottom: 35px
+    
 
 
 
 .wr-about
-    min-height: 500px
-    margin-bottom: 65px
+    margin-bottom: 123px
     .container
         justify-content: flex-end
         background-image: url("../media/bg-about-people.jpg")
@@ -244,7 +249,7 @@ a.more-inf
     display: flex
     flex-direction: column
     flex-basis: 43%
-    padding: 10px
+    padding-top: 10px
     justify-content: center 
     align-items: flex-start
         
@@ -254,12 +259,12 @@ a.more-inf
     h2 
         font-family: oswald, sans-serif       
         font-size: 40px
-        margin-bottom: 30px
+        margin-bottom: 25px
     h3
         font-family: "sfpro regular", sans-serif
         font-size: 24px
         color: #98d074
-        margin-bottom: 15px
+        margin-bottom: 10px
     p
         font-family: raleway, sans-serif
         font-weight: 500
@@ -272,10 +277,8 @@ a.more-inf
        font-weight: 400
 
 .projects
-    
-    min-height: 900px
     max-width: 1400px
-    margin: 0 auto 75px
+    margin-bottom: 75px
     
     .wrap
         text-align: center
@@ -284,6 +287,7 @@ a.more-inf
         flex-direction: row
         flex-wrap: wrap
         overflow: hidden
+        margin-bottom: 55px
         div
             display: inline-block
             max-width: 420px
@@ -309,25 +313,22 @@ a.more-inf
         font-size: 20px
         font-weight: 500
         text-transform: uppercase
-        display: block
         width: max-content
-        margin: 50px auto 0
+        
 
 .team
-    min-height: 515px
-    display: block        
+    display: block
+    margin-bottom: 47px
     h3, p
-        margin: 0 auto
+        text-align: center
     h3
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 32px
         text-transform: uppercase
-        text-align: center
         margin-bottom: 20px
     p    
         font-family: Raleway, sans-serif
-        text-align: center
         font-size: 16px
         font-weight: 600
         margin-bottom: 35px
@@ -338,6 +339,11 @@ a.more-inf
         justify-content: space-around
         img
             margin-bottom: 15px
+            height: 253px
+            width: 233px
+            object-fit: cover
+            object-position: center
+            border-radius: 10px
         h4
             font-family: oswald, sans-serif
             font-size: 23px
@@ -345,13 +351,10 @@ a.more-inf
             font-weight: 400
             margin-bottom: 10px
         p    
-            font-family: Raleway, sans-serif
-            text-align: center
-            font-size: 16px
-            font-weight: 500
+            font-weight: 400
+            color: #808080
 
 .work-organizing
-    min-height: 670px
     background-color: #7bc34d
     padding-top: 100px
     margin-bottom: 60px
@@ -418,7 +421,7 @@ a.more-inf
         margin-bottom: 15px
 
 .feedback
-    min-height: 410px
+    // min-height: 410px
     padding-top: 25px
     flex-direction: column
     align-content: center
