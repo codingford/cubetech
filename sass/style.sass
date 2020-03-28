@@ -3,8 +3,6 @@
 h1, h2, h3, h4, h5, h6, p
     margin: 0
  
-// .active
-//     font-size: 60px
 .visually-hidden
     width: 1px
     height: 0
@@ -318,7 +316,7 @@ a.more-inf
 
 .team
     display: block
-    margin-bottom: 47px
+    margin-bottom: 83px
     h3, p
         text-align: center
     h3
@@ -334,9 +332,10 @@ a.more-inf
         margin-bottom: 35px
     .staff
         display: flex
-        flex-basis: 20%
         flex-wrap: wrap
         justify-content: space-around
+        div
+            flex-basis: 20%
         img
             margin-bottom: 15px
             height: 253px
@@ -353,20 +352,26 @@ a.more-inf
         p    
             font-weight: 400
             color: #808080
+            margin-bottom: 0
 
 .work-organizing
-    background-color: #7bc34d
-    padding-top: 100px
-    margin-bottom: 60px
+    // background-color: #7bc34d
+    padding: 96px 0 150px
+    margin-bottom: 61px
+    background-image: url("../media/bg-our_work.svg")
+    background-position: bottom
+    background-repeat: no-repeat
+    background-size: cover
+    
+    
     h3, p
-        margin: 0 auto
+        text-align: center
     h3
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 32px
         color: #ffffff
         text-transform: uppercase
-        text-align: center
         margin-bottom: 30px
         position: relative
         &::after
@@ -379,14 +384,12 @@ a.more-inf
             left: calc(50% - 58px)
     p    
         font-family: poppins, sans-serif
-        text-align: center
         font-size: 15px
         font-weight: 500
         line-height: 22px
         
     >p
         font-family: Raleway, sans-serif
-        text-align: center
         font-size: 16px
         font-weight: 600
         color: #ffffff
@@ -399,7 +402,7 @@ a.more-inf
             background-color: #ffffff
             border: 5px solid 
             border-radius: 8px
-            padding: 40px 10px
+            padding: 40px 10px 35px
             text-align: center
         div:first-child
             border-color: #bb64ba
@@ -421,7 +424,6 @@ a.more-inf
         margin-bottom: 15px
 
 .feedback
-    // min-height: 410px
     padding-top: 25px
     flex-direction: column
     align-content: center
@@ -432,7 +434,7 @@ a.more-inf
         font-size: 32px
         text-align: center
         text-transform: uppercase
-        margin-bottom: 80px
+        margin-bottom: 72px
     .responsive
         max-width: 90%
         margin: 0 auto
@@ -441,7 +443,10 @@ a.more-inf
         margin: 0 auto
         box-sizing: border-box
         padding: 0 15px
-        
+    .slick-prev, .slick-next, slick-prev:before, .slick-next:before
+        content: " "
+        display: none
+        font-size: 0
     .slick-list
         margin-bottom: 70px
     .slick-dots li button:before
@@ -467,8 +472,8 @@ a.more-inf
         color:#808080
         padding: 0 5px
     img 
-        float: left
-        margin: 7px
+        // float: left
+        // margin: 7px
 
 
 
