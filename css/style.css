@@ -496,7 +496,10 @@ a.more-inf:active {
   box-sizing: border-box;
   padding: 0 15px;
 }
-.feedback .slick-prev, .feedback .slick-next, .feedback slick-prev:before, .feedback .slick-next:before {
+.feedback .slick-prev,
+.feedback .slick-next,
+.feedback .slick-prev:before,
+.feedback .slick-next:before {
   content: " ";
   display: none;
   font-size: 0;
