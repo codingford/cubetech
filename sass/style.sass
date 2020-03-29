@@ -355,7 +355,6 @@ a.more-inf
             margin-bottom: 0
 
 .work-organizing
-    // background-color: #7bc34d
     padding: 96px 0 150px
     margin-bottom: 61px
     background-image: url("../media/bg-our_work.svg")
@@ -427,6 +426,7 @@ a.more-inf
     padding-top: 25px
     flex-direction: column
     align-content: center
+    margin-bottom: 102px
 
     h3
         font-family: oswald, sans-serif
@@ -451,9 +451,9 @@ a.more-inf
         display: none
         font-size: 0
     .slick-list
-        margin-bottom: 70px
+        margin-bottom: 57px
     .slick-dots li button:before
-        font-size: 18px
+        font-size: 15px
         color: #7bc34d 
     h4
         font-family: oswald, sans-serif
@@ -475,32 +475,32 @@ a.more-inf
         color:#808080
         padding: 0 5px
     img 
-        // float: left
-        // margin: 7px
+        float: left
+        margin: 7px
 
 
 
 
 .blog
-    min-height: 1350px
     text-align: center
-    margin-bottom: 80px
+    margin-bottom: 78px
     .container
-        
         flex-direction: row
         flex-wrap: wrap
         justify-content: space-between
+        align-items: stretch
         box-sizing: border-box
         margin-bottom: 30px
         
         >div
             box-sizing: border-box
-            min-width: 270px
+            min-width: 340px
             max-width: 30%
             border: 5px solid #93c948
-            margin-bottom: 75px        
-    h3 
-        font-family: oswald, sans-serif
+            margin-bottom: 78px       
+            position: relative 
+    h3
+        font-family: Oswald, sans-serif
         font-weight: 400
         font-size: 32px
         text-transform: uppercase
@@ -511,50 +511,75 @@ a.more-inf
         font-weight: 600
         margin-bottom: 60px
     .img-wrapper
-        display: flex
-        justify-content: center
-        align-items: center
-        height: 245px
-        overflow: hidden
+            object-position: center
+            object-fit: cover
+            overflow: hidden
+            
+            img
+                width: 332px
+                height: 244px
+    .date
+        position: absolute
+        top: 153px
+        width: 42px
+        height: 91px
+        background-color: #8dc63f
+        font-family: Oswald, sans-serif
+        font-weight: 500
+        text-transform: uppercase
+        color: #ffffff
+        .day
+            font-size: 36px
+            font-weight: 900
+        .month
+            font-size: 24px
+        .year
+            font-size: 18px
+                        
+            
+      
 
 .blog-contents
-    padding: 15px 30px
-    text-align: justify
+    padding: 10px 20px 10px 40px
+    display: flex
+    flex-direction: column
     h4 
-        font-family: raleway, sans-serif
-        font-size: 20px
-        font-weight: 600    
-        margin-bottom: 33px
+        font-family: Oswald, sans-serif
+        font-size: 24px
+        font-weight: 600  
+        letter-spacing: .94px  
         color: #585858
         white-space: nowrap
         overflow: hidden
         text-overflow: ellipsis
+        margin-bottom: 42px
         &:hover
             overflow: visible
             white-space: normal
             margin-bottom: 10px
-
     p
-        font-family: poppins, sans-serif
+        font-family: oswald, sans-serif
         font-size: 16px
         font-weight: 500
+        letter-spacing: 0.55px
         color: #5c5c5c
-        text-align: justify
-        margin-bottom: 15px
+        text-align: left
+        line-height: 125%
+        margin-bottom: 8px
+    .inf-wrap
+        display: flex
+        justify-content: space-between
     .more-inf
         box-sizing: border-box
-        padding: 5px 19px 5px 10px
+        padding: 5px 24px 2px 10px
         text-transform: uppercase
         border-radius: 20px
-        font-weight: 400
-        float: left
-        margin-bottom: 10px
         position: relative
         &::after
             position: absolute
             content: " "
             background-image: url("../media/rarr.png")
-            width: 20px
+            width: 18px
             height: 6px
             top: 16px
     .admin
@@ -564,11 +589,9 @@ a.more-inf
         line-height: 28px
         letter-spacing: 1px
         text-transform: uppercase
-        background-color: #ffffff
         border-radius: 20px
         padding: 5px
         color: #93c948
-        float: right
         &:hover
             background-color: #cdee9f
 
@@ -584,6 +607,12 @@ a.blog-btn
     .collapsable-menu
         display: flex
         justify-content: space-between
+    &::after
+        content: " "
+        width: 100%
+        height: 510px
+        background-color: transparent
+
     
     .accordion
         flex-basis: 48%
@@ -591,6 +620,12 @@ a.blog-btn
             font-family: oswald, sans-serif
             font-weight: 500
             font-size: 23px
+        p 
+            font-family: SFProDisplay
+            font-size: 20px
+            line-height: 1.56
+            text-align: left
+            color: #8d8c8c
        
     >div
         max-height: 100px 
@@ -622,25 +657,35 @@ a.blog-btn
     overflow: auto 
 
 .clients
-    background-color: #71bf3f
-    min-height: 520px
-    display: flex
+    background-image: url("../media/bg-our_clients.svg")
+    background-size: cover
+    background-repeat: no-repeat
+    padding-top: 139px
+    padding-bottom: 142px
+    // display: flex
     align-items: center
+    .heading-wrapper
+        flex-basis: 40%
     h3
+        display: block
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 40px
         text-transform: uppercase
         color: #fff
-        flex-basis: 40%
         text-align: center
+        &+h3 
+            text-align: left 
+
     .container
         align-items: center
+        max-width: 1220px
+        width: 100%
         div
             display: flex
             flex-wrap: wrap
             justify-content: space-between
-            min-height: 300px
+            // min-height: 300px
 
         a 
             padding: 5px
