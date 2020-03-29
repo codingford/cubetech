@@ -2,7 +2,7 @@
 
 $('.responsive').slick({
   dots: true,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 2,
   slidesToScroll: 2,
@@ -64,13 +64,13 @@ $('.flowing-scroll').on('click', function(){
     return false;
 });
 
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.zz07i6JRSt-jNCtOuDaSsQ);
-const msg = {
-  to: 'test@example.com',
-  from: 'test@example.com',
-  subject: 'Sending with Twilio SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-};
-sgMail.send(msg);
+// const sgMail = require('@sendgrid/mail');
+// sgMail.setApiKey(process.env.zz07i6JRSt-jNCtOuDaSsQ);
+// const msg = {
+//   to: 'test@example.com',
+//   from: 'test@example.com',
+//   subject: 'Sending with Twilio SendGrid is Fun',
+//   text: 'and easy to do anywhere, even with Node.js',
+//   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+// };
+// sgMail.send(msg);
