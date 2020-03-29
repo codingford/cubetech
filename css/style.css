@@ -399,7 +399,7 @@ a.more-inf:active {
   padding: 96px 0 150px;
   margin-bottom: 61px;
   background-image: url("../media/bg-our_work.svg");
-  background-position: bottom;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -744,11 +744,13 @@ a.blog-btn {
   background-image: url("../media/bg-our_clients.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center top;
   padding-top: 139px;
-  padding-bottom: 142px;
   align-items: center;
 }
 .clients .heading-wrapper {
+  padding-top: 90px;
+  align-self: flex-start;
   flex-basis: 40%;
 }
 .clients h3 {
@@ -759,9 +761,6 @@ a.blog-btn {
   text-transform: uppercase;
   color: #fff;
   text-align: center;
-}
-.clients h3 + h3 {
-  text-align: left;
 }
 .clients .container {
   align-items: center;
@@ -774,6 +773,7 @@ a.blog-btn {
   justify-content: space-between;
 }
 .clients .container a {
+  margin-bottom: 70px;
   padding: 5px;
 }
 .clients .container a:nth-child(2) {
@@ -784,13 +784,79 @@ a.blog-btn {
 }
 
 .message {
-  background-color: #d65e70;
+  background-image: url("../media/bg-message.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 460px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 0;
+}
+.message::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(6, 6, 6, 0.7);
+  z-index: -1;
 }
 .message .container {
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
   align-items: center;
+}
+.message .container .adress {
+  display: flex;
+  flex-basis: 40%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  padding: 87px 0 0 15px;
+}
+.message .container .message-form {
+  flex-basis: 50%;
+  padding-top: 125px;
+  font-family: Poppins, sans-serif;
+  color: #fff;
+}
+.message .container .message-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+}
+.message .container .message-form input {
+  max-width: 30%;
+}
+.message .container .message-form input.more-inf {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  background-color: #93c948;
+  color: #fff;
+  font-size: 18.5px;
+  max-width: fit-content;
+  padding: 10px 25px;
+  border-bottom: none;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+.message .container .message-form input, .message .container .message-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+}
+.message .container .message-form textarea {
+  resize: none;
 }
 .message .container h3, .message .container h4 {
   font-family: oswald, sans-serif;
@@ -805,6 +871,13 @@ a.blog-btn {
 .message .container h4 + p {
   text-transform: uppercase;
 }
+.message .container h3 {
+  margin-bottom: 10px;
+}
+.message .container h3 + p {
+  line-height: 130%;
+  margin-bottom: 50px;
+}
 .message .container a, .message .container p {
   text-decoration: none;
   display: block;
@@ -813,14 +886,15 @@ a.blog-btn {
   font-weight: 200;
   color: #ffffff;
 }
-.message .container > div {
-  flex-basis: 48%;
-  justify-content: space-around;
-  padding: 5px 15px;
-}
 .message .contacts-inner-wrap {
   display: flex;
   justify-content: space-between;
+}
+.message .contacts-inner-wrap > div {
+  flex-basis: 35%;
+}
+.message .contacts-inner-wrap > div h4 {
+  margin-bottom: 15px;
 }
 
 footer {

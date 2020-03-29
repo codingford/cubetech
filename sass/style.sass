@@ -169,6 +169,7 @@ h1, h2, h3, h4, h5, h6, p
             letter-spacing: -1px
             margin-bottom: 15px
 a.more-inf
+
     display: inline-block
     font-family: oswald, sans-serif
     font-weight: 200
@@ -358,9 +359,10 @@ a.more-inf
     padding: 96px 0 150px
     margin-bottom: 61px
     background-image: url("../media/bg-our_work.svg")
-    background-position: bottom
+    background-position: center bottom
     background-repeat: no-repeat
     background-size: cover
+    
     
     
     h3, p
@@ -660,11 +662,12 @@ a.blog-btn
     background-image: url("../media/bg-our_clients.svg")
     background-size: cover
     background-repeat: no-repeat
+    background-position: center top
     padding-top: 139px
-    padding-bottom: 142px
-    // display: flex
     align-items: center
     .heading-wrapper
+        padding-top: 90px
+        align-self: flex-start
         flex-basis: 40%
     h3
         display: block
@@ -674,9 +677,7 @@ a.blog-btn
         text-transform: uppercase
         color: #fff
         text-align: center
-        &+h3 
-            text-align: left 
-
+     
     .container
         align-items: center
         max-width: 1220px
@@ -685,20 +686,86 @@ a.blog-btn
             display: flex
             flex-wrap: wrap
             justify-content: space-between
-            // min-height: 300px
+            
 
         a 
+            margin-bottom: 70px
             padding: 5px
             &:nth-child(2)
                 padding: 25px
             &:nth-child(5)
                 padding-top: 45px
 .message
-    background-color: #d65e70
+    background-image: url('../media/bg-message.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
     min-height: 460px
     display: flex
     flex-wrap: wrap
+    position: relative
+    z-index: 0
+    &::before
+        content: " "
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        background-color: rgba(6, 6, 6, 0.7)
+        z-index: -1
     .container
+        justify-content: space-between
+        position: relative
+        z-index: 5
+        .adress
+            display: flex
+            flex-basis: 40%
+            flex-direction: column
+            justify-content: space-between
+            align-self: flex-start
+            padding: 87px 0 0 15px
+        
+        .message-form
+            flex-basis: 50%
+            padding-top: 125px
+            font-family: Poppins, sans-serif
+            color: #fff
+            
+            form
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                background-color: transparent
+                border: none
+            
+            input
+                max-width: 30%
+                
+                &.more-inf
+                    font-family: Poppins, sans-serif
+                    font-weight: 500
+                    background-color: #93c948
+                    color: #fff
+                    font-size: 18.5px
+                    max-width: fit-content
+                    padding: 10px 25px
+                    border-bottom: none
+                    border-radius: 25px
+                    margin: 0 auto
+                    
+
+            input, textarea
+                box-sizing: border-box
+                width: 100%
+                padding: 5px
+                background-color: transparent
+                border: none
+                border-bottom: 1px solid #fff
+                margin-bottom: 10px
+            textarea
+                resize: none
+            
         align-items: center
         h3, h4
             font-family: oswald, sans-serif
@@ -710,6 +777,11 @@ a.blog-btn
             font-size: 24px
             &+p
                 text-transform: uppercase
+        h3 
+            margin-bottom: 10px
+            &+p 
+                line-height: 130%
+                margin-bottom: 50px
 
 
         a, p
@@ -719,13 +791,18 @@ a.blog-btn
             font-size: 13px
             font-weight: 200
             color: #ffffff
-        >div
-            flex-basis: 48%
-            justify-content: space-around
-            padding: 5px 15px
+        // >div
+        //     flex-basis: 48%
+        //     justify-content: space-around
+        //     padding: 5px 15px
     .contacts-inner-wrap
         display: flex
         justify-content: space-between
+        >div 
+            flex-basis: 35%
+            h4
+                margin-bottom: 15px
+        
     
 footer
     background-color: #262626
