@@ -738,6 +738,7 @@ a.blog-btn
                 justify-content: space-between
                 background-color: transparent
                 border: none
+                
             
             input
                 max-width: 30%
@@ -763,8 +764,13 @@ a.blog-btn
                 border: none
                 border-bottom: 1px solid #fff
                 margin-bottom: 10px
+                font-family: Poppins, sans-serif
+                color: #fff
+                font-weight: 400
             textarea
                 resize: none
+                
+                
             
         align-items: center
         h3, h4
@@ -807,4 +813,41 @@ a.blog-btn
 footer
     background-color: #262626
     min-height: 385px
-    
+    .container
+        flex-wrap: wrap
+        >div 
+            display: flex
+            margin-bottom: 15px
+    h4 
+        font-family: Oswald
+        font-size: 20px
+        color: #79c64a
+    p, a
+        font-family: Poppins
+        font-size: 15px
+        font-weight: 400
+        line-height: 1.43
+        color: rgba(128, 128, 128, 0.75)
+    .description,
+    .links-wrapper
+        flex-basis: 50%
+        display: flex
+    .description-inner
+        display: flex
+        flex-basis: 50%
+        flex-direction: column
+        align-items: flex-start
+    .links-wrapper
+        justify-content: space-between
+    .social-footer
+        display: flex
+        li 
+            background-color: #fff
+    .social-legal-info
+        display: flex
+        flex-direction: column
+        margin-bottom: 15px
+        // justify-content: 
+    .divider
+        height: 2px
+        background-color: #7bc34d
