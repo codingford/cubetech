@@ -154,6 +154,11 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 114px;
   position: relative;
 }
+@media screen and (max-width: 970px) {
+  .first-screen {
+    height: auto;
+  }
+}
 .first-screen::before {
   content: " ";
   position: absolute;
@@ -171,6 +176,11 @@ h1, h2, h3, h4, h5, h6, p {
   color: #f9f9f9;
   position: relative;
   z-index: 5;
+}
+@media screen and (max-width: 970px) {
+  .first-screen .container {
+    margin-left: 2%;
+  }
 }
 .first-screen .container p {
   font-family: poppins, sans-serif;
@@ -217,6 +227,11 @@ a.more-inf:active {
 }
 .creation .container div {
   flex-basis: 25%;
+}
+@media screen and (max-width: 970px) {
+  .creation .container div {
+    flex-basis: 40%;
+  }
 }
 .creation h3 {
   font-family: oswald, sans-serif;
@@ -268,8 +283,12 @@ a.more-inf:active {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
-.about {
+@media screen and (max-width: 970px) {
+  .wr-about .container {
+    background-image: none;
+  }
+}
+.wr-about .about {
   display: flex;
   flex-direction: column;
   flex-basis: 43%;
@@ -277,22 +296,29 @@ a.more-inf:active {
   justify-content: center;
   align-items: flex-start;
 }
-.about h2, .about h3 {
+@media screen and (max-width: 970px) {
+  .wr-about .about {
+    flex-basis: 100%;
+    align-items: center;
+    padding: 10px;
+  }
+}
+.wr-about .about h2, .wr-about .about h3 {
   text-transform: uppercase;
   font-weight: 400;
 }
-.about h2 {
+.wr-about .about h2 {
   font-family: oswald, sans-serif;
   font-size: 40px;
   margin-bottom: 25px;
 }
-.about h3 {
+.wr-about .about h3 {
   font-family: "sfpro regular", sans-serif;
   font-size: 24px;
   color: #98d074;
   margin-bottom: 10px;
 }
-.about p {
+.wr-about .about p {
   font-family: raleway, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -300,7 +326,7 @@ a.more-inf:active {
   color: #808080;
   margin-bottom: 30px;
 }
-.about a {
+.wr-about .about a {
   font-size: 19px;
   font-weight: 400;
 }
@@ -374,6 +400,12 @@ a.more-inf:active {
 .team .staff div {
   flex-basis: 20%;
 }
+@media screen and (max-width: 970px) {
+  .team .staff div {
+    flex-basis: 40%;
+    justify-content: space-around;
+  }
+}
 .team .staff img {
   margin-bottom: 15px;
   height: 253px;
@@ -389,10 +421,20 @@ a.more-inf:active {
   font-weight: 400;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 970px) {
+  .team .staff h4 {
+    display: flex;
+  }
+}
 .team .staff p {
   font-weight: 400;
   color: #808080;
   margin-bottom: 0;
+}
+@media screen and (max-width: 970px) {
+  .team .staff p {
+    display: flex;
+  }
 }
 
 .work-organizing {
@@ -448,6 +490,12 @@ a.more-inf:active {
   border-radius: 8px;
   padding: 40px 10px 35px;
   text-align: center;
+}
+@media screen and (max-width: 970px) {
+  .work-organizing .container div {
+    flex-basis: 40%;
+    justify-content: space-around;
+  }
 }
 .work-organizing .container div:first-child {
   border-color: #bb64ba;
@@ -550,6 +598,11 @@ a.more-inf:active {
   align-items: stretch;
   box-sizing: border-box;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1120px) {
+  .blog .container {
+    justify-content: space-around;
+  }
 }
 .blog .container > div {
   box-sizing: border-box;
@@ -767,10 +820,22 @@ a.blog-btn {
   max-width: 1220px;
   width: 100%;
 }
+@media screen and (max-width: 970px) {
+  .clients .container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
 .clients .container div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .clients .container div {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 .clients .container a {
   margin-bottom: 70px;
@@ -903,6 +968,7 @@ a.blog-btn {
 footer {
   background-color: #262626;
   min-height: 385px;
+  padding: 0 15px;
 }
 footer .container {
   flex-wrap: wrap;
@@ -951,6 +1017,10 @@ footer .social-legal-info {
 footer .divider {
   height: 2px;
   background-color: #7bc34d;
+}
+
+a:hover {
+  box-shadow: 0 0 10px #7bc34d;
 }
 
 /*# sourceMappingURL=style.css.map */
