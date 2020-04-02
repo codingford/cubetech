@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p
         bottom: 0
         background-color: rgba(155, 72, 72, 0.1)
         z-index: 0
-        
+    
 .main-header
     display: flex
     background-color: #262626
@@ -61,7 +61,8 @@ h1, h2, h3, h4, h5, h6, p
         margin: 0
     ul
         a 
-           position: relative
+            position: relative
+            
 
 
 .address-li-item a:before
@@ -87,11 +88,11 @@ h1, h2, h3, h4, h5, h6, p
     justify-content: space-between
     a
         padding: 5px
-
+        transition-duration: .1s
+        
 .social-nav-header,
 .main-nav,
 .main-nav ul
-    
     display: flex
     align-items: center
     
@@ -103,6 +104,14 @@ h1, h2, h3, h4, h5, h6, p
     width: 100%
     justify-content: flex-end
     align-items: baseline
+    i
+        font-size: 16px
+        color: #808080
+        &:hover
+            color: #000
+            transform: scale(1.1)
+    a 
+        padding: 5px
     li
         
         padding: 0
@@ -290,18 +299,44 @@ a.more-inf
     margin-bottom: 75px
     
     .wrap
-        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
     
     .img-wrapper
+        display: flex
         flex-direction: row
         flex-wrap: wrap
         overflow: hidden
         margin-bottom: 55px
+        justify-content: space-around
         div
-            display: inline-block
-            max-width: 420px
-            max-height: 320px
-            margin: 7px
+            flex-basis: 32%
+            overflow: hidden
+            margin-bottom: 10px
+            position: relative
+            &::before
+                position: absolute
+                content:""
+                left: 0
+                right: 0
+                bottom: 0
+                top: 0
+                background-color: #98d074
+                z-index: -5
+        
+                
+
+        img 
+            object-position: center
+            object-fit: cover
+            height: 100%
+            width: 100%
+            transition-duration: .5s
+            &:hover
+                transform: translate(-10px, -6px)
+            
+
 
     h3
         font-family: oswald, sans-serif
@@ -399,7 +434,8 @@ a.more-inf
             height: 3px
             background-color: #ffffff
             bottom: -13px
-            left: calc(50% - 58px)
+            left: 50%
+            transform: translateX(-50%)
     p    
         font-family: poppins, sans-serif
         font-size: 15px
@@ -461,16 +497,31 @@ a.more-inf
     .responsive
         max-width: 90%
         margin: 0 auto
-    .imgs-wr
+    .feedback-item-wr
         max-width: 35%
+        display: flex
+        flex-wrap: wrap
         margin: 0 auto
         box-sizing: border-box
-        padding: 0 15px
+        padding: 10px 15px
+        .name-post
+            flex-shrink: 1
+        img
+            margin-right: 5px
+            height: 40px
+            width: 60px
+            object-position: center
+            object-fit: cover
+            border-radius: 50%
+            border: 4px solid #ffffff
+           
+          
     .slick-prev, 
     .slick-next,
     .slick-prev:before,
     .slick-next:before
         content: " "
+        position: absolute
         display: none
         font-size: 0
     .slick-list
@@ -482,9 +533,8 @@ a.more-inf
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 20px
-        margin: 15px 7px 5px
         letter-spacing: 1px
-    span 
+    span
         font-family: raleway, sans-serif
         font-weight: 400
         font-size: 15px
@@ -497,9 +547,7 @@ a.more-inf
         line-height: 27px
         color:#808080
         padding: 0 5px
-    img 
-        float: left
-        margin: 7px
+    
 
 
 
@@ -726,6 +774,8 @@ a.blog-btn
                 padding: 25px
             &:nth-child(5)
                 padding-top: 45px
+            &:hover
+                box-shadow: 0 0 10px #fff
 .message
     background-image: url('../media/bg-message.jpg')
     background-position: center
@@ -836,14 +886,17 @@ a.blog-btn
             flex-basis: 35%
             h4
                 margin-bottom: 15px
-        
+a:hover,
+.submit:hover,
+.more-inf:hover
+    box-shadow: 0 0 10px #7bc34d     
     
 footer
     background-color: #262626
-    min-height: 385px
-    padding: 0 15px
+    padding-top: 30px
     .container
         flex-wrap: wrap
+        padding: 5px 10px
         >div 
             display: flex
             margin-bottom: 15px
@@ -851,6 +904,8 @@ footer
         font-family: Oswald
         font-size: 20px
         color: #79c64a
+        margin-bottom: 15px
+        font-weight: 300
     p, a
         font-family: Poppins
         font-size: 15px
@@ -866,20 +921,42 @@ footer
         flex-basis: 50%
         flex-direction: column
         align-items: flex-start
+        img 
+            margin-bottom: 15px
     .links-wrapper
         justify-content: space-between
     .social-footer
         display: flex
         li 
-            background-color: #fff
+            margin-left: 10px
+            box-sizing: border-box
+        a 
+            padding: 10px
+
+
+        i
+            font-size: 20px
+            color: #808080
+                
+            
     .social-legal-info
         display: flex
-        flex-direction: column
         margin-bottom: 15px
-        // justify-content: 
+    .legal-info
+        display: flex
+        width: 100%
+        justify-content: space-between
     .divider
+        width: 100%
         height: 2px
         background-color: #7bc34d
-a:hover
-    box-shadow: 0 0 10px #7bc34d
+    a:hover
+    
+        transform: scale(1.1)
+        color: #fff
+        transition-duration: .3s
+    i:hover
+        transform: scale(1.3)
+        box-shadow: 0 0 10px #fff
+        color: white
 
