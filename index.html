@@ -20,8 +20,7 @@
                 <div class="container">
                     <div class="centering-wrapper">
                         <a href="#"><img src="./media/logo.png" alt="logo image" class="logo"></a>
-                        <ul class="logo-contact">
-                            
+                        <ul class="logo-contact mob-nav">
                             <li class="address-li-item"><a href="https://g.page/itacademy-pvt?share" target="_blank" rel="noreferrer"><p><span>Address</span>State life housing Society, Lahore</p></a></li>
                             <li class="email-li-item"><a href="mailto:info@exaple.com"><p><span>Email</span>info@example.com</p></a>
                             </li>
@@ -33,7 +32,7 @@
             </div>
         <div class="container navigation">
             <div class="centering-wrapper">
-                <ul class="social-nav-header">
+                <ul class="social-nav-header mob-nav">
                     <li><a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
@@ -42,8 +41,9 @@
                     <li><a href="https://twitter.com/" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
                     </li>
                 </ul>
-                <nav class="main-nav">    
-                    <ul>
+                <nav class="main-nav"> 
+                    <a href="#" class="toggler"><i class="fa fa-bars"></i></a>   
+                    <ul class="full-navigation">
                         <li><a href="#">Home</a></li>
                         <li><a class="flowing-scroll" href="#about">About</a></li>
                         <li><a class="flowing-scroll" href="#projects">Projects</a></li>
@@ -52,7 +52,10 @@
                         <li><a class="flowing-scroll" href="#faq">FAQ</a></li>
                         <li><a class="flowing-scroll" href="#clients">Clients</a></li>
                         <li><a class="flowing-scroll" href="#contacts">Contact Us</a></li>
+                        <!-- <li><a href="#" class="toggler"><i class="fa fa-bars"></i></a></li> -->
                     </ul>
+                    
+                    
                 </nav>
             </div>
         </div>
@@ -71,26 +74,28 @@
             <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</P>
             
             <div class="container">
-                <div>
-                    <img src="./media/open-laptop-computer.png" alt="decorative image">
-                    <h4>Clean and Sleek Design</h4>
-                    <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
+               
+                    <div>
+                        <img src="./media/open-laptop-computer.png" alt="decorative image">
+                        <h4>Clean and Sleek Design</h4>
+                        <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
                     </div>
-                <div>
-                    <img src="./media/comments.png" alt="decorative image">
-                    <h4>Dedicated Support</h4>
-                    <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
-                </div>
-                <div>
-                    <img src="./media/icon-2-copy.png" alt="decorative image">
-                    <h4>Responsive Design</h4>
-                    <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
-                </div>
-                <div>
-                    <img src="./media/heart.png" alt="decorative image">
-                    <h4>Speed and Performance</h4>
-                    <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
-                </div>
+                    <div>
+                        <img src="./media/comments.png" alt="decorative image">
+                        <h4>Dedicated Support</h4>
+                        <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
+                    </div>
+                    <div>
+                        <img src="./media/icon-2-copy.png" alt="decorative image">
+                        <h4>Responsive Design</h4>
+                        <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
+                    </div>
+                    <div>
+                        <img src="./media/heart.png" alt="decorative image">
+                        <h4>Speed and Performance</h4>
+                        <p>I am text block. Click edit button to the change this text. Lorem ipsum dolor totum the Sorem alam.</p>
+                    </div>
+                
             </div>
  
         </section>
@@ -111,7 +116,7 @@
             <div class="wrap">
                 <h3>our projects</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eligendi.</p>
-                <div class="img-wrapper">
+                <div class="img-wrapper switching-slider">
                     <div><a href="#"><img src="./media/project-1.jpg" alt="project one"></a></div>
                     <div><a href="#"><img src="./media/project-2.jpg" alt="project two"></a></div>
                     <div><a href="#"><img src="./media/project-3.jpg" alt="project three"></a></div>
@@ -127,6 +132,7 @@
             <h3>our team</h3>
             <p>Lorem ipsum dolor sit amet.</p>
             <div class="staff">
+                <!--  responsive slider-item -->
                 <div>
                 <img src="./media/team1.jpg" alt="staff one">
                 <h4>Thomas Cubriq</h4>
@@ -353,7 +359,7 @@
             <!-- collapsable group -->
             
                 <div class="collapsable-menu">
-                    <div class="accordion">
+                    <div id="accordion" class="accordion">
                         <h3>Collapsible Group Item #1</h3>
                         <div>
                             <p>
@@ -378,8 +384,32 @@
                             lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
                             </p>
                         </div>
+                        <h3 class="accordion-col-2">Collapsible Group Item #4</h3>
+                        <div class="accordion-col-2">
+                            <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                            mauris vel est.</p>
+                            <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                            inceptos himenaeos.</p>
+                        </div>
+                        <h3 class="accordion-col-2">Collapsible Group Item #5</h3>
+                        <div class="accordion-col-2">
+                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                        </div>
+                        <h3 class="accordion-col-2">Collapsible Group Item #6</h3>
+                        <div class="accordion-col-2">
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna.</p>
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitorvelit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urnaSed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitorvelit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urnSed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitorvelit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urnSed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitorvelit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urn.</p>
+                        </div>
                     </div>
-                    <div class="accordion">
+                    <div id="accordion-col-2" class="accordion">
                         <h3>Collapsible Group Item #4</h3>
                         <div>
                             <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus
@@ -480,7 +510,8 @@
                     <ul>
                         <li><a href="#">Human Resources</a></li>
                         <li><a href="#">Insurance</a></li>
-                        <li><a href="#">Information Technology</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Technology</a></li>
                         <li><a href="#">Real Estate</a></li>
                         <li><a href="#">Accounting</a></li>
                     </ul>

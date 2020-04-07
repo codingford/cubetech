@@ -11,9 +11,12 @@ h1, h2, h3, h4, h5, h6, p
     left: -9999px
     overflow: hidden
     clip: rect(0, 0, 0, 0)
+// .hidden 
+//     display: none !important
 
 .wr-header
     position: relative
+    
     .logo-contact
         max-width: 504px
         width: 100%
@@ -30,6 +33,9 @@ h1, h2, h3, h4, h5, h6, p
         bottom: 0
         background-color: rgba(155, 72, 72, 0.1)
         z-index: 0
+    .mob-nav
+        @media (max-width: 768px)
+            display: none
     
 .main-header
     display: flex
@@ -42,7 +48,8 @@ h1, h2, h3, h4, h5, h6, p
     width: 100%
     justify-content: space-between
     align-items: baseline
-    
+    .logo 
+        padding: 10px
     .container
         width: 100%
         justify-content: space-between
@@ -62,7 +69,8 @@ h1, h2, h3, h4, h5, h6, p
     ul
         a 
             position: relative
-            
+        
+               
 
 
 .address-li-item a:before
@@ -76,11 +84,13 @@ h1, h2, h3, h4, h5, h6, p
     top: 5px
     left: -30px
 
-.call-us-li-item a:before
-    content: url(../media/call-logo.png)
-    position: absolute
-    top: 4px
-    left: -30px
+.call-us-li-item
+    margin-right: 10px
+    a:before
+        content: url(../media/call-logo.png)
+        position: absolute
+        top: 4px
+        left: -30px
 
 .container.navigation
     box-sizing: border-box
@@ -88,13 +98,15 @@ h1, h2, h3, h4, h5, h6, p
     justify-content: space-between
     a
         padding: 5px
-        transition-duration: .1s
+    
         
 .social-nav-header,
 .main-nav,
 .main-nav ul
     display: flex
     align-items: center
+    @media (max-width: 768px)
+            display: block
     
     
 
@@ -118,13 +130,19 @@ h1, h2, h3, h4, h5, h6, p
         margin-left: 12px
 
 .main-nav
-    width: 530px
+    max-width: 530px
+    width: 100%
+    .toggler
+        display: none 
+        @media (max-width: 768px)
+            display: block
+            position: relative
+            z-index: 3
 
     ul
         width: 100%
         flex-wrap: wrap
         justify-content: space-between
-    
     a
         display: inline-block
         font-family: poppins, sans-serif
@@ -132,8 +150,19 @@ h1, h2, h3, h4, h5, h6, p
         font-weight: 500
         color: #000
         padding: 5px
-    li:last-child a
-        padding-right: 0
+.respond
+    
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    // position: absolute
+    // z-index: 5
+  
+
+
+  
+
     
         
 .first-screen
@@ -141,15 +170,15 @@ h1, h2, h3, h4, h5, h6, p
     background-repeat: no-repeat
     background-position: center
     background-size: cover
-    
     height: calc(100vh - 146px)
-    @media screen and (max-width: 970px)
-            height: auto
     display: flex
     flex-direction: column
     justify-content: center
     margin-bottom: 114px
     position: relative
+    @media screen and (max-width: 991px)
+            height: auto
+            margin-bottom: 20px
     &::before
         content: " "
         position: absolute
@@ -199,18 +228,24 @@ a.more-inf
         transform: translateY(4px)
 
 .creation
+    display: block           
+    text-align: center
+    letter-spacing: -1px
+    margin-bottom: 160px
+    @media screen and (max-width: 991px)
+            margin-bottom: 15px
     .container
         flex-direction: row
         flex-wrap: wrap
         justify-content: space-between
+        @media screen and (max-width: 991px)
+                justify-content: space-around
         div
             flex-basis: 25%
-            @media screen and (max-width: 970px)
+            @media screen and (max-width: 991px)
                 flex-basis: 40%
-    text-align: center
-    letter-spacing: -1px
-    margin-bottom: 160px
-    display: block
+
+    
     h3
         font-family: oswald, sans-serif
         font-weight: 500
@@ -218,6 +253,8 @@ a.more-inf
         letter-spacing: -1px
         margin-bottom: 27px
         position: relative
+        @media screen and (max-width: 991px)
+            margin-bottom: 15px
         &::after
             position: absolute
             content: " "
@@ -225,7 +262,6 @@ a.more-inf
             height: 3px
             background-color: #7ac34c
             bottom: -13px
-            // left: calc(50% - 58px)
             left: 50%
             transform: translateX(-50%)
     p
@@ -236,28 +272,38 @@ a.more-inf
         padding: 3px 10px
         margin: 0 10px
         margin-bottom: 50px
+        @media screen and (max-width: 991px)
+                margin-bottom: 20px
     h4 
         font-family: oswald, sans-serif
         font-weight: 500
         font-size: 20px
         margin-bottom: 25px
+        @media screen and (max-width: 991px)
+            margin-bottom: 15px
         &+p 
             margin-bottom: 0
+            @media screen and (max-width: 991px)
+                margin-bottom: 15px
     img 
         height: 51px
         margin-bottom: 35px
+        @media screen and (max-width: 991px)
+            margin-bottom: 15px
     
 
 
 
 .wr-about
     margin-bottom: 123px
+    @media screen and (max-width: 991px)
+            margin-bottom: 20px
     .container
         justify-content: flex-end
         background-image: url("../media/bg-about-people.jpg")
         background-size: contain
         background-repeat: no-repeat
-        @media screen and (max-width: 970px)
+        @media screen and (max-width: 991px)
             background-image: none
     .about
         display: flex
@@ -266,7 +312,7 @@ a.more-inf
         padding-top: 10px
         justify-content: center 
         align-items: flex-start
-        @media screen and (max-width: 970px)
+        @media screen and (max-width: 991px)
             flex-basis: 100%
             align-items: center
             padding: 10px
@@ -297,7 +343,8 @@ a.more-inf
 .projects
     max-width: 1400px
     margin-bottom: 75px
-    
+    @media screen and (max-width: 991px)
+            margin-bottom: 20px
     .wrap
         display: flex
         flex-direction: column
@@ -310,6 +357,8 @@ a.more-inf
         overflow: hidden
         margin-bottom: 55px
         justify-content: space-around
+        @media screen and (max-width: 991px)
+            margin-bottom: 20px
         div
             flex-basis: 32%
             overflow: hidden
@@ -351,6 +400,8 @@ a.more-inf
         font-weight: 600
         text-align: center
         margin-bottom: 50px
+        @media screen and (max-width: 991px)
+            margin-bottom: 20px
 
     
     .more-inf
@@ -382,14 +433,14 @@ a.more-inf
         justify-content: space-around
         div
             flex-basis: 20%
-            @media screen and (max-width: 970px)
-                flex-basis: 40%
-                justify-content: space-around
+            // @media screen and (max-width: 970px)
+            //     flex-basis: 40%
+            //     justify-content: space-around
         img
             margin-bottom: 15px
-            height: 253px
-            width: 233px
-            object-fit: cover
+            // height: 253px
+            width: 100%
+            object-fit: contain
             object-position: center
             border-radius: 10px
         h4
@@ -414,7 +465,9 @@ a.more-inf
     background-position: center bottom
     background-repeat: no-repeat
     background-size: cover
-    
+    @media screen and (max-width: 991px)
+            padding: 20px 0 80px
+            margin-bottom: 5px
     
     
     h3, p
@@ -451,6 +504,8 @@ a.more-inf
     .container
         justify-content: space-between
         flex-wrap: wrap
+        @media screen and (max-width: 991px)
+            justify-content: space-around        
         div
             flex-basis: 20%
             background-color: #ffffff
@@ -458,10 +513,10 @@ a.more-inf
             border-radius: 8px
             padding: 40px 10px 35px
             text-align: center
-            @media screen and (max-width: 970px)
-                flex-basis: 40%
+            // @media screen and (max-width: 991px)
+            //     flex-basis: 35%
                 
-                justify-content: space-around
+               
         div:first-child
             border-color: #bb64ba
         div:nth-child(2)
@@ -486,6 +541,8 @@ a.more-inf
     flex-direction: column
     align-content: center
     margin-bottom: 102px
+    @media screen and (max-width: 991px)
+        margin-bottom: 40px
 
     h3
         font-family: oswald, sans-serif
@@ -494,6 +551,8 @@ a.more-inf
         text-align: center
         text-transform: uppercase
         margin-bottom: 72px
+        @media screen and (max-width: 991px)
+            margin-bottom: 20px
     .responsive
         max-width: 90%
         margin: 0 auto
@@ -526,6 +585,8 @@ a.more-inf
         font-size: 0
     .slick-list
         margin-bottom: 57px
+        @media screen and (max-width: 991px)
+            margin-bottom: 20px
     .slick-dots li button:before
         font-size: 15px
         color: #7bc34d 
@@ -555,6 +616,8 @@ a.more-inf
 .blog
     text-align: center
     margin-bottom: 78px
+    @media screen and (max-width: 991px)
+        margin-bottom: 30px
     .container
         flex-direction: row
         flex-wrap: wrap
@@ -562,35 +625,43 @@ a.more-inf
         align-items: stretch
         box-sizing: border-box
         margin-bottom: 30px
-        @media screen and (max-width: 1120px)
-            justify-content: space-around
+        // @media screen and (max-width: 1120px)
+        //     justify-content: space-around
         
         >div
             box-sizing: border-box
-            min-width: 340px
-            max-width: 30%
+            width: 30%
             border: 5px solid #93c948
             margin-bottom: 78px       
             position: relative 
+            @media screen and (max-width: 991px)
+                margin-bottom: 20px
     h3
         font-family: Oswald, sans-serif
         font-weight: 400
         font-size: 32px
         text-transform: uppercase
         margin-bottom: 35px
+        @media screen and (max-width: 991px)
+            margin-bottom: 20px
     h3+p
         font-family: Raleway, sans-serif
         font-size: 16px
         font-weight: 600
         margin-bottom: 60px
+        @media screen and (max-width: 991px)
+            margin-bottom: 20px
     .img-wrapper
-            object-position: center
-            object-fit: cover
+            max-height: 51%
             overflow: hidden
             
             img
-                width: 332px
-                height: 244px
+                // width: 332px
+                // height: 244px
+                width: 100%
+                height: 100%
+                object-position: center
+                object-fit: cover
     .date
         position: absolute
         top: 153px
@@ -642,6 +713,7 @@ a.more-inf
     .inf-wrap
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
     .more-inf
         box-sizing: border-box
         padding: 5px 24px 2px 10px
@@ -675,8 +747,10 @@ a.blog-btn
 
 .faq
     flex-direction: column
-    min-height: 760px
+    // min-height: 760px
     align-items: center
+    @media screen and ( max-width: 991px )
+        margin-bottom: 50px
     .collapsable-menu
         display: flex
         justify-content: space-between
@@ -685,11 +759,18 @@ a.blog-btn
         width: 100%
         height: 510px
         background-color: transparent
+        @media screen and ( max-width: 991px )
+                display: none
 
-    
+    .collapsable-menu
+        max-height: 100px 
+        @media screen and ( max-width: 991px )
+            max-height: initial
     .accordion
-        
         flex-basis: 48%
+        @media screen and ( max-width: 991px )
+            flex-basis: 90%
+        
 
         h3
             font-family: oswald, sans-serif
@@ -701,9 +782,6 @@ a.blog-btn
             line-height: 1.56
             text-align: left
             color: #8d8c8c
-       
-    >div
-        max-height: 100px 
     >h3
         font-family: oswald, sans-serif
         font-weight: 500
@@ -717,20 +795,35 @@ a.blog-btn
         font-weight: 600    
         margin-bottom: 85px
         color: #585858  
+        @media screen and ( max-width: 991px )
+            margin-bottom: 15px    
     .ui-accordion-header-active,
     .ui-button:active,
     .ui-state-active   
         background-color: #93c948
         border-color: #7bc34d
-.ui-accordion .ui-accordion-header
-        font-family: oswald, sans-serif
-        font-weight: 500
-        font-size: 24px
-        outline-color: #71bf3f
-.ui-widget-content, .ui-accordion-content-active
-    height: 260px 
-    overflow: auto 
+    .ui-accordion .ui-accordion-header
+            font-family: oswald, sans-serif
+            font-weight: 500
+            font-size: 24px
+            outline-color: #71bf3f
+    .ui-widget-content, .ui-accordion-content-active
+        height: 260px 
+        overflow: auto 
 
+
+    .collapsable-menu
+        @media screen and ( max-width: 991px )
+            justify-content: space-around
+            
+    #accordion-col-2
+        @media screen and ( max-width: 991px )
+            display: none
+    .accordion-col-2
+        @media screen and ( min-width: 991px )
+            display: none
+    
+        
 .clients
     background-image: url("../media/bg-our_clients.svg")
     background-size: cover
@@ -738,10 +831,15 @@ a.blog-btn
     background-position: center top
     padding-top: 139px
     align-items: center
+    @media screen and (max-width: 991px)
+        padding-top: 20px
     .heading-wrapper
         padding-top: 90px
         align-self: flex-start
         flex-basis: 40%
+        @media screen and (max-width: 991px)
+            padding-top: 20px
+            align-self: center
     h3
         display: block
         font-family: oswald, sans-serif
@@ -750,12 +848,14 @@ a.blog-btn
         text-transform: uppercase
         color: #fff
         text-align: center
+        
+            
      
     .container
         align-items: center
         max-width: 1220px
         width: 100%
-        @media screen and (max-width: 970px)
+        @media screen and (max-width: 991px)
             flex-direction: column
             justify-content: space-around
         div
@@ -765,6 +865,7 @@ a.blog-btn
             @media screen and (max-width: 600px)
                 flex-direction: column
                 justify-content: space-around
+                align-items: center
             
 
         a 
@@ -799,19 +900,30 @@ a.blog-btn
         justify-content: space-between
         position: relative
         z-index: 5
+        flex-wrap: wrap
+        @media screen and (max-width: 991px)
+            text-align: center
         .adress
             display: flex
             flex-basis: 40%
+            min-width: 320px
             flex-direction: column
             justify-content: space-between
             align-self: flex-start
             padding: 87px 0 0 15px
+            @media screen and (max-width: 991px)
+                padding: 20px 10px
+                flex-basis: 100%
+            
         
         .message-form
             flex-basis: 50%
             padding-top: 125px
             font-family: Poppins, sans-serif
             color: #fff
+            @media screen and (max-width: 991px)
+                padding: 20px 10px
+                flex-basis: 100%
             
             form
                 display: flex
@@ -896,9 +1008,10 @@ footer
     padding-top: 30px
     .container
         flex-wrap: wrap
-        padding: 5px 10px
+        
         >div 
             display: flex
+            padding: 5px 10px
             margin-bottom: 15px
     h4 
         font-family: Oswald
@@ -916,6 +1029,10 @@ footer
     .links-wrapper
         flex-basis: 50%
         display: flex
+    .description 
+        flex-shrink: 1
+    .links-wrapper
+        flex-grow: 1
     .description-inner
         display: flex
         flex-basis: 50%
@@ -941,9 +1058,11 @@ footer
             
     .social-legal-info
         display: flex
+        flex-wrap: wrap
         margin-bottom: 15px
     .legal-info
         display: flex
+        flex-wrap: wrap
         width: 100%
         justify-content: space-between
     .divider
