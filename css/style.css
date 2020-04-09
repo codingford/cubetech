@@ -561,7 +561,7 @@ a.more-inf:active {
 .team .staff p {
   font-weight: 400;
   color: #808080;
-  text-lign: center;
+  text-align: center;
   margin-bottom: 0;
 }
 
@@ -824,6 +824,11 @@ a.more-inf:active {
 .blog .img-wrapper {
   max-height: 51%;
   overflow: hidden;
+}
+@media screen and (max-width: 414px) {
+  .blog .img-wrapper {
+    margin-bottom: 10%;
+  }
 }
 .blog .img-wrapper img {
   width: 100%;
