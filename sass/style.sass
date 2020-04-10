@@ -213,6 +213,7 @@ h1, h2, h3, h4, h5, h6, p
             font-size: 47px
             letter-spacing: -1px
             margin-bottom: 15px
+
 a.more-inf
 
     display: inline-block
@@ -327,6 +328,8 @@ a.more-inf
             font-family: oswald, sans-serif       
             font-size: 40px
             margin-bottom: 25px
+            @media screen and (max-width: 320px)
+                font-size: 32px
         h3
             font-family: "sfpro regular", sans-serif
             font-size: 24px
@@ -825,10 +828,7 @@ a.blog-btn
         background-color: #93c948
         border-color: #7bc34d
     .ui-accordion .ui-accordion-header
-            font-family: oswald, sans-serif
-            font-weight: 500
-            font-size: 24px
-            outline-color: #71bf3f
+        outline-color: #71bf3f
     .ui-widget-content, .ui-accordion-content-active
         height: 260px 
         overflow: auto 

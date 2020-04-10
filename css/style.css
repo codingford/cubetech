@@ -411,6 +411,11 @@ a.more-inf:active {
   font-size: 40px;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 320px) {
+  .wr-about .about h2 {
+    font-size: 32px;
+  }
+}
 .wr-about .about h3 {
   font-family: "sfpro regular", sans-serif;
   font-size: 24px;
@@ -1008,9 +1013,6 @@ a.blog-btn {
   border-color: #7bc34d;
 }
 .faq .ui-accordion .ui-accordion-header {
-  font-family: oswald, sans-serif;
-  font-weight: 500;
-  font-size: 24px;
   outline-color: #71bf3f;
 }
 .faq .ui-widget-content, .faq .ui-accordion-content-active {
