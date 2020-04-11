@@ -11,8 +11,6 @@ h1, h2, h3, h4, h5, h6, p
     left: -9999px
     overflow: hidden
     clip: rect(0, 0, 0, 0)
-// .hidden 
-//     display: none !important
 
 .wr-header
     position: relative
@@ -98,8 +96,11 @@ h1, h2, h3, h4, h5, h6, p
     box-sizing: border-box
     min-height: 42px
     justify-content: space-between
+    padding-right: 5px
     a
-        padding: 5px
+        &:hover
+            padding: 5px
+            color: #fff
     
         
 .social-nav-header,
@@ -121,9 +122,7 @@ h1, h2, h3, h4, h5, h6, p
     i
         font-size: 16px
         color: #808080
-        &:hover
-            color: #000
-            transform: scale(1.1)
+
     a 
         padding: 5px
     li
@@ -201,6 +200,8 @@ h1, h2, h3, h4, h5, h6, p
         z-index: 5
         @media screen and (max-width: 970px)
             margin-left: 2%
+        @media screen and (max-width: 500px)
+            width: auto
 
         p
             font-family: poppins, sans-serif
@@ -213,6 +214,8 @@ h1, h2, h3, h4, h5, h6, p
             font-size: 47px
             letter-spacing: -1px
             margin-bottom: 15px
+            @media screen and (max-width: 500px)
+                font-size: 32px
 
 a.more-inf
 
@@ -245,12 +248,15 @@ a.more-inf
         justify-content: space-between
         @media screen and (max-width: 991px)
                 justify-content: space-around
+
         div
             flex-basis: 25%
             @media screen and (max-width: 991px)
                 flex-basis: 40%
+            @media screen and (max-width: 441px)
+                flex-direction: column
+                flex-basis: auto
 
-    
     h3
         font-family: oswald, sans-serif
         font-weight: 500
@@ -290,6 +296,7 @@ a.more-inf
             margin-bottom: 0
             @media screen and (max-width: 991px)
                 margin-bottom: 15px
+
     img 
         height: 51px
         margin-bottom: 35px
@@ -328,7 +335,7 @@ a.more-inf
             font-family: oswald, sans-serif       
             font-size: 40px
             margin-bottom: 25px
-            @media screen and (max-width: 320px)
+            @media screen and (max-width: 414px)
                 font-size: 32px
         h3
             font-family: "sfpro regular", sans-serif
@@ -445,7 +452,6 @@ a.more-inf
                 margin-bottom: 10px
         img
             margin-bottom: 15px
-            // height: 253px
             width: 100%
             object-fit: contain
             object-position: center
@@ -472,8 +478,10 @@ a.more-inf
     background-repeat: no-repeat
     background-size: cover
     @media screen and (max-width: 991px)
-            padding: 20px 0 80px
-            margin-bottom: 5px
+        padding: 20px 0 80px
+        margin-bottom: 5px
+    @media screen and (max-width: 812px)
+        padding-bottom: 100px
     
     
     h3, p
@@ -500,7 +508,11 @@ a.more-inf
         font-size: 15px
         font-weight: 500
         line-height: 22px
-        
+        @media screen and (max-width: 768px)
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            margin-bottom: 20px
     >p
         font-family: Raleway, sans-serif
         font-size: 16px
@@ -513,7 +525,8 @@ a.more-inf
         justify-content: space-between
         flex-wrap: wrap
         @media screen and (max-width: 991px)
-            justify-content: space-around        
+            justify-content: space-around
+
         div
             width: 20%
             background-color: #ffffff
@@ -521,15 +534,9 @@ a.more-inf
             border-radius: 8px
             padding: 40px 10px 35px
             text-align: center
-            @media screen and (max-width: 768px)
-                width: 35%
-                margin-bottom: 10px
-                max-height: 150px
-                overflow-y: scroll
-
-
-                
-               
+            @media screen and (max-width: 812px)
+                width: 31%
+                margin-bottom: 20px
         div:first-child
             border-color: #bb64ba
         div:nth-child(2)
@@ -545,9 +552,19 @@ a.more-inf
             font-size: 20px
             color: #000000
             margin-bottom: 15px
+    .see-saw
+        display: none
+        @media screen and (max-width: 768px)
+            display: inline-block
+            font-weight: 400
+            padding: 10px 15px
+            border-radius: 5px
+
     img
         height: 40px
         margin-bottom: 15px
+
+
 
 .feedback
     padding-top: 25px
@@ -594,7 +611,7 @@ a.more-inf
     .slick-next:before
         content: " "
         position: absolute
-        display: none
+        display: none !important
         font-size: 0
     .slick-list
         margin-bottom: 57px
@@ -622,6 +639,7 @@ a.more-inf
         color: #808080
         padding: 0 5px
     
+
 
 
 
@@ -1066,8 +1084,18 @@ footer
             margin-bottom: 10px
     .links-wrapper
         flex-grow: 1
+        justify-content: space-between
         div
             margin-right: 10px
+        @media screen and (max-width: 991px)
+            justify-content: space-around
+        @media screen and (max-width: 414px)
+            flex-direction: column
+            line-height: 150%
+            div
+                &:nth-child(1),
+                &:nth-child(2)
+                    margin-bottom: 10px
     .description-inner
         flex-basis: 50%
         flex-direction: column
@@ -1077,10 +1105,9 @@ footer
             justify-content: space-around
         img 
             margin-bottom: 15px
-    .links-wrapper
-        justify-content: space-between
-        @media screen and (max-width: 991px)
-            justify-content: space-around
+
+
+
     .social-footer
         display: flex
         li 
@@ -1104,13 +1131,58 @@ footer
         width: 100%
         height: 2px
         background-color: #7bc34d
-    a:hover
+    a
+        &:hover
+            color: #fff
+.logo-contact,
+.clients
+    a
+        &:hover
+            box-shadow: 0 0 10px #fff
+.modal,
+.item1,
+.item2,
+.item3,
+.item4
+    display: none
+
+.modal1-show
+    display: block
+.show
+    position: absolute
+    display: block
+    top: 50px
+    left: 50%
+    background-color: #fff
+    z-index: 15
+    &::before
+        content: " "
+        position: fixed
+        background-color: rgba(0, 0, 0, .7)
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        z-index: 10
+//.item1,
+//.item2,
+//.item3,
+//.item4
+//    display: none
+//.item1-show,
+//.item2-show,
+//.item3-show,
+//.item4-show
+//    display: block
     
-        transform: scale(1.1)
-        color: #fff
-        transition-duration: .2s
-    i:hover
-        transform: scale(1.1)
-        box-shadow: 0 0 10px #fff
-        color: #fff
+
+
+//            transform: scale(1.1)
+//            color: #fff
+//            //transition-duration: .2s
+//            box-shadow: 0 0 10px #fff
+//    i:hover
+//        transform: scale(1.1)
+//        box-shadow: 0 0 10px #fff
+//        color: #fff
 

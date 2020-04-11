@@ -28,6 +28,7 @@ $('.responsive').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
+        arrows: false,
         dots: true
       }
     },
@@ -63,6 +64,15 @@ slider.on('wheel', (function(e) {
 
 let menToggler = document.querySelector('.toggler');
 let fullNav = document.querySelector('.full-navigation');
+let modal = document.querySelector('.modal');
+let modal1 = document.querySelector('.modal1');
+let modal2 = document.querySelector('.modal2');
+let modal3 = document.querySelector('.modal3');
+let modal4 = document.querySelector('.modal4');
+let modalItem1 = document.querySelector('.item1');
+let modalItem2 = document.querySelector('.item2');
+let modalItem3 = document.querySelector('.item3');
+let modalItem4 = document.querySelector('.item4');
 
 
 menToggler.addEventListener('click', function(evt){
@@ -71,6 +81,14 @@ menToggler.addEventListener('click', function(evt){
 
     console.log('luck')
 });
+
+modal1.addEventListener('click', function(evt){
+  evt.preventDefault();
+    modal.classList.toggle('modal1-show');
+    modalItem1.classList.add('show');
+    console.log('luck pop up 1')
+});
+
 
 
 // const sgMail = require('@sendgrid/mail');

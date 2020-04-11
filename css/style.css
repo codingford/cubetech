@@ -115,9 +115,11 @@ h1, h2, h3, h4, h5, h6, p {
   box-sizing: border-box;
   min-height: 42px;
   justify-content: space-between;
+  padding-right: 5px;
 }
-.container.navigation a {
+.container.navigation a:hover {
   padding: 5px;
+  color: #fff;
 }
 
 .social-nav-header,
@@ -143,10 +145,6 @@ h1, h2, h3, h4, h5, h6, p {
 .social-nav-header i {
   font-size: 16px;
   color: #808080;
-}
-.social-nav-header i:hover {
-  color: #000;
-  transform: scale(1.1);
 }
 .social-nav-header a {
   padding: 5px;
@@ -241,6 +239,11 @@ h1, h2, h3, h4, h5, h6, p {
     margin-left: 2%;
   }
 }
+@media screen and (max-width: 500px) {
+  .first-screen .container {
+    width: auto;
+  }
+}
 .first-screen .container p {
   font-family: poppins, sans-serif;
   font-weight: 400;
@@ -252,6 +255,11 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 47px;
   letter-spacing: -1px;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 500px) {
+  .first-screen .container h2 {
+    font-size: 32px;
+  }
 }
 
 a.more-inf {
@@ -300,6 +308,12 @@ a.more-inf:active {
 @media screen and (max-width: 991px) {
   .creation .container div {
     flex-basis: 40%;
+  }
+}
+@media screen and (max-width: 441px) {
+  .creation .container div {
+    flex-direction: column;
+    flex-basis: auto;
   }
 }
 .creation h3 {
@@ -411,7 +425,7 @@ a.more-inf:active {
   font-size: 40px;
   margin-bottom: 25px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
   .wr-about .about h2 {
     font-size: 32px;
   }
@@ -584,6 +598,11 @@ a.more-inf:active {
     margin-bottom: 5px;
   }
 }
+@media screen and (max-width: 812px) {
+  .work-organizing {
+    padding-bottom: 100px;
+  }
+}
 .work-organizing h3, .work-organizing p {
   text-align: center;
 }
@@ -611,6 +630,14 @@ a.more-inf:active {
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
+}
+@media screen and (max-width: 768px) {
+  .work-organizing p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+  }
 }
 .work-organizing > p {
   font-family: Raleway, sans-serif;
@@ -641,12 +668,10 @@ a.more-inf:active {
   padding: 40px 10px 35px;
   text-align: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
   .work-organizing .container div {
-    width: 35%;
-    margin-bottom: 10px;
-    max-height: 150px;
-    overflow-y: scroll;
+    width: 31%;
+    margin-bottom: 20px;
   }
 }
 .work-organizing .container div:first-child {
@@ -667,6 +692,17 @@ a.more-inf:active {
   font-size: 20px;
   color: #000000;
   margin-bottom: 15px;
+}
+.work-organizing .see-saw {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .work-organizing .see-saw {
+    display: inline-block;
+    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
 }
 .work-organizing img {
   height: 40px;
@@ -727,7 +763,7 @@ a.more-inf:active {
 .feedback .slick-next:before {
   content: " ";
   position: absolute;
-  display: none;
+  display: none !important;
   font-size: 0;
 }
 .feedback .slick-list {
@@ -1302,9 +1338,24 @@ footer .description {
 }
 footer .links-wrapper {
   flex-grow: 1;
+  justify-content: space-between;
 }
 footer .links-wrapper div {
   margin-right: 10px;
+}
+@media screen and (max-width: 991px) {
+  footer .links-wrapper {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 414px) {
+  footer .links-wrapper {
+    flex-direction: column;
+    line-height: 150%;
+  }
+  footer .links-wrapper div:nth-child(1), footer .links-wrapper div:nth-child(2) {
+    margin-bottom: 10px;
+  }
 }
 footer .description-inner {
   flex-basis: 50%;
@@ -1319,14 +1370,6 @@ footer .description-inner {
 }
 footer .description-inner img {
   margin-bottom: 15px;
-}
-footer .links-wrapper {
-  justify-content: space-between;
-}
-@media screen and (max-width: 991px) {
-  footer .links-wrapper {
-    justify-content: space-around;
-  }
 }
 footer .social-footer {
   display: flex;
@@ -1359,14 +1402,43 @@ footer .divider {
   background-color: #7bc34d;
 }
 footer a:hover {
-  transform: scale(1.1);
   color: #fff;
-  transition-duration: 0.2s;
 }
-footer i:hover {
-  transform: scale(1.1);
+
+.logo-contact a:hover,
+.clients a:hover {
   box-shadow: 0 0 10px #fff;
-  color: #fff;
+}
+
+.modal,
+.item1,
+.item2,
+.item3,
+.item4 {
+  display: none;
+}
+
+.modal1-show {
+  display: block;
+}
+
+.show {
+  position: absolute;
+  display: block;
+  top: 50px;
+  left: 50%;
+  background-color: #fff;
+  z-index: 15;
+}
+.show::before {
+  content: " ";
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */
