@@ -117,10 +117,6 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: space-between;
   padding-right: 5px;
 }
-.container.navigation a:hover {
-  padding: 5px;
-  color: #fff;
-}
 
 .social-nav-header,
 .main-nav,
@@ -273,8 +269,10 @@ a.more-inf {
   background-color: #93c948;
   color: #fff;
 }
-a.more-inf:hover {
-  background-color: #7ac34c;
+@media (hover: hover) {
+  a.more-inf:hover {
+    background-color: #7ac34c;
+  }
 }
 a.more-inf:active {
   background-color: #6bb83b;
@@ -499,8 +497,10 @@ a.more-inf:active {
   width: 100%;
   transition-duration: 0.5s;
 }
-.projects .img-wrapper img:hover {
-  transform: translate(-10px, -6px);
+@media (hover: hover) {
+  .projects .img-wrapper img:hover {
+    transform: translate(-10px, -6px);
+  }
 }
 .projects h3 {
   font-family: oswald, sans-serif;
@@ -942,7 +942,7 @@ a.more-inf:active {
   height: 6px;
   top: 16px;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 500px) {
   .blog-contents p {
     display: none;
   }
@@ -961,8 +961,10 @@ a.more-inf:active {
   padding: 5px;
   color: #93c948;
 }
-.blog-contents .admin:hover {
-  background-color: #cdee9f;
+@media (hover: hover) {
+  .blog-contents .admin:hover {
+    background-color: #cdee9f;
+  }
 }
 
 a.blog-btn {
@@ -1284,12 +1286,13 @@ a.blog-btn {
   margin-bottom: 15px;
 }
 
-a:hover,
-.submit:hover,
-.more-inf:hover {
-  box-shadow: 0 0 10px #7bc34d;
+@media (hover: hover) {
+  a:hover,
+  .submit:hover,
+  .more-inf:hover {
+    box-shadow: 0 0 10px #7bc34d;
+  }
 }
-
 footer {
   background-color: #262626;
   padding-top: 30px;
@@ -1383,7 +1386,7 @@ footer .social-footer a {
 }
 footer .social-footer i {
   font-size: 20px;
-  color: #808080;
+  color: #fff;
 }
 footer .social-legal-info {
   display: flex;
@@ -1401,13 +1404,17 @@ footer .divider {
   height: 2px;
   background-color: #7bc34d;
 }
-footer a:hover {
-  color: #fff;
+@media (hover: hover) {
+  footer a:hover {
+    color: #fff;
+  }
 }
 
-.logo-contact a:hover,
-.clients a:hover {
-  box-shadow: 0 0 10px #fff;
+@media (hover: hover) {
+  .logo-contact a:hover,
+  .clients a:hover {
+    box-shadow: 0 0 10px #fff;
+  }
 }
 
 .modal,

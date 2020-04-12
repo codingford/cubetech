@@ -97,11 +97,6 @@ h1, h2, h3, h4, h5, h6, p
     min-height: 42px
     justify-content: space-between
     padding-right: 5px
-    a
-        &:hover
-            padding: 5px
-            color: #fff
-    
         
 .social-nav-header,
 .main-nav,
@@ -228,9 +223,9 @@ a.more-inf
     padding: 14px 20px
     background-color: #93c948
     color: #fff
-    
-    &:hover
-        background-color: #7ac34c
+    @media (hover: hover)
+        &:hover
+            background-color: #7ac34c
     &:active 
         background-color: #6bb83b
         transform: translateY(4px)
@@ -396,8 +391,9 @@ a.more-inf
             height: 100%
             width: 100%
             transition-duration: .5s
-            &:hover
-                transform: translate(-10px, -6px)
+            @media (hover: hover)
+                &:hover
+                    transform: translate(-10px, -6px)
             
 
 
@@ -735,10 +731,7 @@ a.more-inf
         //overflow: hidden
         //text-overflow: ellipsis
         margin-bottom: 10px
-        //&:hover
-            overflow: visible
-            white-space: normal
-            margin-bottom: 10px
+
     p
         font-family: oswald, sans-serif
         font-size: 16px
@@ -765,7 +758,7 @@ a.more-inf
             width: 18px
             height: 6px
             top: 16px
-    @media screen and ( max-width: 414px )
+    @media screen and ( max-width: 500px )
         p
             display: none
         h4
@@ -780,8 +773,9 @@ a.more-inf
         border-radius: 20px
         padding: 5px
         color: #93c948
-        &:hover
-            background-color: #cdee9f
+        @media (hover: hover)
+            &:hover
+                background-color: #cdee9f
 
 a.blog-btn
     font-weight: 500
@@ -1040,10 +1034,11 @@ a.blog-btn
             flex-basis: 35%
             h4
                 margin-bottom: 15px
-a:hover,
-.submit:hover,
-.more-inf:hover
-    box-shadow: 0 0 10px #7bc34d     
+@media (hover: hover)
+    a:hover,
+    .submit:hover,
+    .more-inf:hover
+        box-shadow: 0 0 10px #7bc34d
     
 footer
     background-color: #262626
@@ -1117,7 +1112,7 @@ footer
             padding: 10px
         i
             font-size: 20px
-            color: #808080
+            color: #fff
     .social-legal-info
         display: flex
         flex-wrap: wrap
@@ -1131,14 +1126,16 @@ footer
         width: 100%
         height: 2px
         background-color: #7bc34d
-    a
-        &:hover
-            color: #fff
+    @media (hover: hover)
+        a
+            &:hover
+                color: #fff
 .logo-contact,
 .clients
-    a
-        &:hover
-            box-shadow: 0 0 10px #fff
+    @media (hover: hover)
+        a
+            &:hover
+                box-shadow: 0 0 10px #fff
 .modal,
 .item1,
 .item2,
@@ -1164,6 +1161,9 @@ footer
         top: 0
         bottom: 0
         z-index: 10
+
+
+
 //.item1,
 //.item2,
 //.item3,
@@ -1175,14 +1175,4 @@ footer
 //.item4-show
 //    display: block
     
-
-
-//            transform: scale(1.1)
-//            color: #fff
-//            //transition-duration: .2s
-//            box-shadow: 0 0 10px #fff
-//    i:hover
-//        transform: scale(1.1)
-//        box-shadow: 0 0 10px #fff
-//        color: #fff
 
